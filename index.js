@@ -20,7 +20,7 @@ const api =
   "https://api.chooks.app/videos?status=live,upcoming&group=nijisanji";
 
 function yt(id) {
-  return Response.redirect("https://youtube.com/watch?v=" + id, 307);
+  return Response.redirect("https://www.youtube.com/watch?v=" + id, 307);
 }
 
 async function handleRequest() {
