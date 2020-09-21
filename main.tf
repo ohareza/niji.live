@@ -25,6 +25,18 @@ resource "cloudflare_zone_settings_override" "this" {
     security_level           = "essentially_off"
     automatic_https_rewrites = "on"
     ssl                      = "strict"
+    http2                    = "on"
+    http3                    = "on"
+    zero_rtt                 = "on"
+    min_tls_version          = "1.3"
+    tls_1_3                  = "zrt"
+    security_header {
+      enabled            = true
+      preload            = true
+      max_age            = 31536000
+      include_subdomains = true
+      nosniff            = true
+    }
   }
 }
 
@@ -37,12 +49,12 @@ resource "cloudflare_record" "this" {
 }
 
 resource "cloudflare_page_rule" "this" {
-  zone_id = cloudflare_zone.this.id
-  target = "${local.domain}/*"
+  zone_id  = cloudflare_zone.this.id
+  target   = "${local.domain}/*"
   priority = 1
 
   actions {
-    always_use_https = true
+    always_use_https         = true
     automatic_https_rewrites = "on"
   }
 }
