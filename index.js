@@ -23,7 +23,7 @@ function yt(id) {
 }
 
 async function handleRequest() {
-  const request = await fetch(api, { cf: { cacheTtl: 60 } });
+  const request = await fetch(api);
   if (!request.ok) return new Response("live machine broke", { status: 503 });
 
   const videos = await request.json();
