@@ -65,7 +65,18 @@ resource "cloudflare_worker_route" "this" {
   script_name = cloudflare_worker_script.this.name
 }
 
+resource "cloudflare_worker_route" "this" {
+  zone_id     = cloudflare_zone.this.id
+  pattern     = "${local.domain}/schedule"
+  script_name = cloudflare_worker_script.schedule.name
+}
+
 resource "cloudflare_worker_script" "this" {
   name    = "niji-live"
   content = file("index.js")
+}
+
+resource "cloudflare_worker_script" "schedule" {
+  name    = "niji-live-schedule"
+  content = file("schedule.js")
 }
