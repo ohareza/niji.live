@@ -65,7 +65,7 @@ resource "cloudflare_worker_route" "this" {
   script_name = cloudflare_worker_script.this.name
 }
 
-resource "cloudflare_worker_route" "this" {
+resource "cloudflare_worker_route" "schedule" {
   zone_id     = cloudflare_zone.this.id
   pattern     = "${local.domain}/schedule"
   script_name = cloudflare_worker_script.schedule.name
