@@ -1,0 +1,18 @@
+{
+  "name": "niji-live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohareza/niji.live.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohareza/niji.live/issues"
+  },
+  "homepage": "https://github.com/ohareza/niji.live#readme",
+  "dependencies": {}
+}
