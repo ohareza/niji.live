@@ -38,11 +38,10 @@ async function handleRequest(request) {
 
   const url = new URL(request.url)
 
-  const ident = url.hostname.split(".").slice(0, -2).join(".") || url.pathname.substring(1)
+  const ident = (url.hostname.split(".").slice(0, -2).join(".") || url.pathname.substring(1)).toLowerCase()
 
   if (!/[^a-zA-Z]/.test(ident)) {
-    console.log(ident)
-    if (ident.toLowerCase() in liverMap) {
+    if (ident in liverMap) {
       return Response.redirect("https://www.youtube.com/channel/" + liverMap[ident] + "/live", 301)
     } else {
       return Response.redirect(errorPage, 302)
@@ -52,7 +51,7 @@ async function handleRequest(request) {
   const channelIds = []
 
   ident.split(/[^a-zA-Z0-9]/).forEach(nick => {
-    if (nick.toLowerCase() in liverMap) {
+    if (nick in liverMap) {
       channelIds.push(liverMap[nick])
     }
   })
