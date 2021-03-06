@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --quote-props consistent --no-semi --write '**/*.{js,css,json,md}'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ohareza/niji.live.git"
@@ -14,5 +16,8 @@
     "url": "https://github.com/ohareza/niji.live/issues"
   },
   "homepage": "https://github.com/ohareza/niji.live#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
 }
