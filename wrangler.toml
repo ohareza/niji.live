@@ -1,5 +1,5 @@
 name = "niji-live"
-type = "webpack"
+type = "javascript"
 account_id = "d61d2c977c5074c34218f7000b9deb71"
 zone_id = "fd3e5db0439a0b06ff19b8573cafe90b"
 routes = ["*.niji.live/*", "niji.live/*"]
