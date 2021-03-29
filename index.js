@@ -27,7 +27,6 @@ const liverMap = {}
 
 const errorPage =
   "https://gist.github.com/ohareza/502eff996358202095fafcd529328326#file-niji-live-md"
-const iha = "https://api.ihateani.me/v2/graphql"
 
 async function handleRequest(request) {
   if (Object.keys(liverMap).length === 0) {
@@ -105,8 +104,8 @@ async function handleRequest(request) {
     if (found) {
       return
     }
-    minTime = Infinity
-    minId = ""
+    let minTime = Infinity
+    let minId = ""
     queryRes.upcoming.items.forEach((live) => {
       if (live.channel_id == id && live.timeData.scheduledStartTime < minTime) {
         minTime = live.timeData.scheduledStartTime
@@ -119,7 +118,7 @@ async function handleRequest(request) {
   })
 
   if (videoIds.length > 0) {
-    theaterUrl = "https://twitchtheater.tv"
+    let theaterUrl = "https://twitchtheater.tv"
     videoIds.forEach((id) => {
       theaterUrl += "/v=" + id
     })
