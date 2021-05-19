@@ -21,6 +21,9 @@ const livers = {
   "UCijNnZ-6m8g85UGaRAWuw7g": ["nagisa"],
   "UCMzVa7B8UEdrvUGsPmSgyjA": ["derem"],
   "UC5yckZliCkuaEFbqzLBD7hQ": ["reza", "ejak"],
+  
+  // Others
+  "UCLjx3lqIkYkPCBJop8czJ2A": ["hada"],
 }
 
 const liverMap = {}
