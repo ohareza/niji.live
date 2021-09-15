@@ -21,9 +21,47 @@ const livers = {
   "UCijNnZ-6m8g85UGaRAWuw7g": ["nagisa"],
   "UCMzVa7B8UEdrvUGsPmSgyjA": ["derem"],
   "UC5yckZliCkuaEFbqzLBD7hQ": ["reza", "ejak"],
-  
-  // Others
+  // Wave 6
+  "UCIBj1-d71vKjRftiauF50pg": ["hyona"],
+  "UCoJ0Ct-jdas4cLPpSp06gZg": ["xia","xixixia"],
+  "UCahgMxSIQ2zIRrPKhM6Mjvg": ["mika"],
+  // Niji
+  "UC8C1LLhBhf_E2IBPLSDJXlQ": ["sukoya"],
+  "UCspv01oxUFf_MTSipURRhkA": ["kanae"],
+
+  // NijiKR
   "UCLjx3lqIkYkPCBJop8czJ2A": ["hada"],
+  "UCeGendL8CO5RkffB6IFwHow": ["seffyna"],
+  "UCClwIqTUn5LDpFucHyaAhHg": ["roha"],
+  "UC1ZV7KBscK0EMoJKFu1DnDg": ["bora"],
+  "UCmWqYB6y8gSfPONWGspuOWQ": ["ara"],
+  "UC5ek2GWKvUKFgnKSHuuCFrw": ["nagi"],
+  "UCSlv7Z-4q7_7NRkzJB10A5Q": ["siu"],
+  "UCUtKkGKef8BYMs3h-3zQm9A": ["suha"],
+
+  // NijiEN
+  "UCu-J8uIXuLZh16gG-cT1naw": ["finana", "finance"],
+  "UCIeSUTOTkF9Hs7q3SGcO-Ow": ["elira"],
+  "UCP4nMSTdwU1KqYWu3UH5DHQ": ["pomu"],
+  "UCV1xUwfM2v2oBtT3JNvic3w": ["selen"],
+  "UC4WvIIAo89_AzGUh1AZ6Dkg": ["rosemi"],
+  "UCgA2jKRkqpY_8eysPUs8sjw": ["petra"],
+
+  // HoloEN
+  "UCL_qhgtOy0dy1Agp8vkySQg": ["calli"],
+  "UCHsx4Hqa-1ORjQTh9TYDhww": ["kiara"],
+  "UCMwGHR0BTZuLsmjY_NT5Pwg": ["ina"],
+  "UCoSrY_IQQVpmIRZ9Xf-y93g": ["gura"],
+  "UCyl1z3jo3XHR1riLFKG5UAg": ["watson"],
+  "UC8rcEBzJSleTkf_-agPM20g": ["irys"],
+
+  // HoloID
+  "UCOyYb1c43VlX9rc_lT6NKQw": ["risu"],
+  "UCP0BspO_AMEe3aQqqpo89Dg": ["moona"],
+  "UCAoy6rzhSf4ydcYjJw3WoVg": ["iofi"],
+  "UCYz_5n-uDuChHtLo7My1HnQ": ["ollie"],
+  "UC727SQYUvx5pDDGQpTICNWg": ["anya"],
+  "UChgTyjG-pdNvxxhdsXfHQ5Q": ["reine"],
 }
 
 const liverMap = {}
@@ -31,7 +69,22 @@ const liverMap = {}
 const errorPage =
   "https://gist.github.com/ohareza/502eff996358202095fafcd529328326#file-niji-live-md"
 
+function dns() {
+    dnsStr = ""
+
+    Object.keys(liverMap).forEach((alias) => {
+        dnsStr += alias + "\t1\tIN\tA\t2.4.3.4\n";
+    })
+
+    return new Response(dnsStr, { 
+        headers: { 
+            "content-type": "text/plain;charset=UTF-8"
+        } 
+    })
+}
+
 async function handleRequest(request) {
+
   if (Object.keys(liverMap).length === 0) {
     // Lazily initialize livermap
     for (const [id, nicks] of Object.entries(livers)) {
@@ -42,6 +95,10 @@ async function handleRequest(request) {
   }
 
   const url = new URL(request.url)
+
+  if(url.pathname.substring(1) == "dns") {
+      return dns()
+  }
 
   const ident = (
     url.hostname.split(".").slice(0, -2).join(".") || url.pathname.substring(1)
