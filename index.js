@@ -29,6 +29,7 @@ const livers = {
   "UC8C1LLhBhf_E2IBPLSDJXlQ": ["sukoya"],
   "UCspv01oxUFf_MTSipURRhkA": ["kanae"],
 
+
   // NijiKR
   "UCLjx3lqIkYkPCBJop8czJ2A": ["hada"],
   "UCeGendL8CO5RkffB6IFwHow": ["seffyna"],
@@ -40,12 +41,33 @@ const livers = {
   "UCUtKkGKef8BYMs3h-3zQm9A": ["suha"],
 
   // NijiEN
+  "UC-JSeFfovhNsEhftt1WHMvg": ["english"],
   "UCu-J8uIXuLZh16gG-cT1naw": ["finana", "finance"],
   "UCIeSUTOTkF9Hs7q3SGcO-Ow": ["elira"],
   "UCP4nMSTdwU1KqYWu3UH5DHQ": ["pomu"],
   "UCV1xUwfM2v2oBtT3JNvic3w": ["selen"],
   "UC4WvIIAo89_AzGUh1AZ6Dkg": ["rosemi"],
   "UCgA2jKRkqpY_8eysPUs8sjw": ["petra"],
+  "UCR6qhsLpn62WVxCBK1dkLow": ["enna"],
+  "UC47rNmkDcNgbOcM-2BwzJTQ": ["millie"],
+  "UCBURM8S4LH7cRZ0Clea9RDA": ["reimu"],
+  "UCkieJGn3pgJikVW8gmMXE2w": ["nina"],
+  "UCckdfYDGrjojJM28n5SHYrA": ["vox"],
+  "UCG0rzBZV_QMP4MtWg6IjhEA": ["shu"],
+  "UC4yNIKGvy-YUrwYupVdLDXA": ["ike"],
+  "UC7Gb7Uawe20QyFibhLl1lzA": ["luca"],
+  "UCIM92Ok_spNKLVB5TsgwseQ": ["mysta"],
+  "UCGhqxhovNfaPBpxfCruy9EA": ["fulgur"],
+  "UChJ5FTsHOu72_5OVx0rvsvQ": ["uki"],
+  "UCQ1zGxHrfEmmW4CPpBx9-qw": ["alban"],
+  "UCuuAb_72QzK0M1USPMEl1yw": ["sonny"],
+  "UCSc_KzY_9WYAx9LghggjVRA": ["yugo"],
+  "UCwaS8_S7kMiKA3izlTWHbQg":["maria"],
+  "UCsb-1aJgiJXJH2feV-zlZRw":["kyo"],
+  "UCN68LoM3khS4gdBMiWJO8WA":["aia"],
+  "UCpzxZW5kghGnO5TmAFJQAVw":["aster"],
+  "UCFgXWZOUZA2oYHNr6qDmsTQ":["scarle"],
+  "UCKu59gTZ_rdEmerdx5rV4Yg":["ren"],
 
   // HoloEN
   "UCL_qhgtOy0dy1Agp8vkySQg": ["calli"],
@@ -55,6 +77,12 @@ const livers = {
   "UCyl1z3jo3XHR1riLFKG5UAg": ["watson"],
   "UC8rcEBzJSleTkf_-agPM20g": ["irys"],
 
+  // Tempus
+  "UCyxtGMdWlURZ30WSnEjDOQw":["regis"],
+  "UC7MMNHR-kf9EN1rXiesMTMw":["magni"],
+  "UC2hx0xVkMoHGWijwr_lA01w":["axel"],
+  "UCDRWSO281bIHYVi-OV3iFYA":["noir"],
+
   // HoloID
   "UCOyYb1c43VlX9rc_lT6NKQw": ["risu"],
   "UCP0BspO_AMEe3aQqqpo89Dg": ["moona"],
@@ -62,6 +90,9 @@ const livers = {
   "UCYz_5n-uDuChHtLo7My1HnQ": ["ollie"],
   "UC727SQYUvx5pDDGQpTICNWg": ["anya"],
   "UChgTyjG-pdNvxxhdsXfHQ5Q": ["reine"],
+  "UCTvHWSfBZgtxE4sILOaurIQ": ["zeta"],
+  "UCZLZ8Jjx_RN2CXloOmgTHVg": ["kaela"],
+  "UCjLEmnpCNeisMxy134KPwWw": ["kobo"],
 }
 
 const liverMap = {}
